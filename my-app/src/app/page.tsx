@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Card,
   CardContent,
@@ -12,6 +13,7 @@ import { Badge } from "./components/ui/badge";
 import { Music, Home } from "lucide-react";
 
 export default function App() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -72,10 +74,10 @@ export default function App() {
                   </div>
                   <div className="space-y-2">
                     <CardTitle className="text-xl">
-                      Level Assessment
+                      Music sheet 1
                     </CardTitle>
                     <CardDescription className="text-sm">
-                      Evaluate your violin playing skills and
+                      Option 1 of learning
                       technique
                     </CardDescription>
                   </div>
@@ -84,6 +86,7 @@ export default function App() {
                   <Button
                     variant="outline"
                     className="w-full bg-white/50 hover:bg-white/70"
+                    onClick={() => router.push('/musicSheet')}
                   >
                     Start Session
                   </Button>
@@ -105,10 +108,10 @@ export default function App() {
                   </div>
                   <div className="space-y-2">
                     <CardTitle className="text-xl">
-                      Condition 1
+                      Music sheet 2
                     </CardTitle>
                     <CardDescription className="text-sm">
-                      Condition 1
+                      Option 2 of learning
                     </CardDescription>
                   </div>
                 </CardHeader>
@@ -137,10 +140,10 @@ export default function App() {
                   </div>
                   <div className="space-y-2">
                     <CardTitle className="text-xl">
-                      Condition 2
+                      Music sheet 3
                     </CardTitle>
                     <CardDescription className="text-sm">
-                      Condition 2
+                      Option 3 of learning
                     </CardDescription>
                   </div>
                 </CardHeader>
